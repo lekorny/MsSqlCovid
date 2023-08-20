@@ -1,1 +1,8 @@
 Это файл какого формата?
+
+Вставляем код:
+
+SELECT location, ROUND((MAX(total_deaths)/MAX(total_cases))*100, 2) AS death_per
+FROM CovidDeaths
+GROUP BY location
+ORDER BY 2 DESC
